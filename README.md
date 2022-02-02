@@ -61,6 +61,18 @@ neu run --frontend-lib-dev
 npm run devp
 ```
 
+https://neutralino.js.org/docs/cli/neu-cli
+
+# config:
+
+
+```
+"cli": {
+  "clientLibrary": "/resources/js/neutralino.js",
+}
+```
+
+
 ## Bugs:
   - Neutralino.os.execCommand()
     - If not code correctly. The browser client can't be close.
