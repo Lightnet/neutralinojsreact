@@ -50,10 +50,24 @@ neu update
 neu run
 ```
 
+  dev hot reload (not working...)
+  
+```
+neu run --frontend-lib-dev
+```
+
+  server and browser client
+```
+npm run devp
+```
+
 ## Bugs:
   - Neutralino.os.execCommand()
     - If not code correctly. The browser client can't be close.
+  - hot reload socket for neutralino.js commication to browser app not found correct way to access api
 
+# Links:
+- https://neutralino.js.org/docs/how-to/use-a-frontend-library
 
 # Ref:
  - https://www.youtube.com/watch?v=4WAur8r7Jhk&list=PLvTbqpiPhQRb2xNQlwMs0uVV0IN8N-pKj&index=3
