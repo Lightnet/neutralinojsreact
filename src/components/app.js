@@ -5,10 +5,12 @@
 
 import React from "react";
 import ButtonApi from "./buttonapi";
+import WindowHeader from "./neutralino/windowheader";
 
 export default function MyApp(){
 
   return <>
+    <WindowHeader />
     <div style={{
     position:'fixed'
     , top:'28px'

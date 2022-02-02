@@ -64,6 +64,7 @@ npm run devp
 https://neutralino.js.org/docs/cli/neu-cli
 
 # Layout:
+- .babelrc (compile for bundle.js)
 - resources (browser client)
 - src (client and server)
 - neutralino.config.json (browser config)

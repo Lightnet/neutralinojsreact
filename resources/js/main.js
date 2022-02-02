@@ -10,25 +10,40 @@
 console.log('NL_APPID',NL_APPID);
 console.log('NL_OS',NL_OS);
 console.log('NL_PORT',NL_PORT);
-
+// https://neutralino.js.org/docs/api/os#ossettrayoptions
 function setTray() {
     if(NL_MODE != "window") {
         console.log("INFO: Tray menu is only available in the window mode.");
         return;
     }
     let tray = {
-        icon: "/resources/icons/trayIcon.png",
-        menuItems: [
-            {id: "VERSION", text: "Get version"},
-            {id: "SEP", text: "-"},
-            {id: "QUIT", text: "Quit"}
-        ]
+      icon: "/resources/icons/trayIcon.png",
+      menuItems: [
+        {id: "APP", text: "App Visible"},
+        {id: "VERSION", text: "Get version"},
+        {id: "SEP", text: "-"},
+        {id: "QUIT", text: "Quit"}
+      ]
     };
     Neutralino.os.setTray(tray);
 }
 
+// https://neutralino.js.org/docs/api/window
+async function toggleAppDisplay(){
+  console.log('hello')
+  let status = await Neutralino.window.isVisible();
+  if(status){
+    await Neutralino.window.hide();
+  }else{
+    await Neutralino.window.show();
+  }
+}
+
 function onTrayMenuItemClicked(event) {
   switch(event.detail.id) {
+    case "APP":
+      toggleAppDisplay();
+      break;
     case "VERSION":
       Neutralino.os.showMessageBox("Version information",
         `Neutralinojs server: v${NL_VERSION} | Neutralinojs client: v${NL_CVERSION}`);
@@ -64,6 +79,7 @@ serversetup();
 console.log(window.location);
 
 Neutralino.init();
+//Neutralino.window.
 
 Neutralino.events.on("trayMenuItemClicked", onTrayMenuItemClicked);
 Neutralino.events.on("windowClose", onWindowClose);
