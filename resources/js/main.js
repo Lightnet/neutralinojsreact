@@ -1,22 +1,15 @@
-// This is just a sample app. You can structure your Neutralinojs app code as you wish.
-// This example app is written with vanilla JavaScript and HTML.
-// Feel free to use any frontend framework you like :)
 /*
-function showInfo() {
-    document.getElementById('info').innerHTML = `
-    ${NL_APPID} is running on port ${NL_PORT}  inside ${NL_OS}
-    <br/><br/>
-    <span>server: v${NL_VERSION} . client: v${NL_CVERSION}</span>
-    `;
-}
-*/
-//function openDocs() {
-    //Neutralino.os.open("https://neutralino.js.org/docs");
-//}
+  LICENSE: MIT
+  Created by: Lightnet
 
-//function openTutorial() {
-    //Neutralino.os.open("https://www.youtube.com/watch?v=txDlNNsgSh8&list=PLvTbqpiPhQRb2xNQlwMs0uVV0IN8N-pKj");
-//}
+  Information:
+    Default main entry set up app.
+
+*/
+
+console.log('NL_APPID',NL_APPID);
+console.log('NL_OS',NL_OS);
+console.log('NL_PORT',NL_PORT);
 
 function setTray() {
     if(NL_MODE != "window") {
@@ -35,19 +28,19 @@ function setTray() {
 }
 
 function onTrayMenuItemClicked(event) {
-    switch(event.detail.id) {
-        case "VERSION":
-            Neutralino.os.showMessageBox("Version information",
-                `Neutralinojs server: v${NL_VERSION} | Neutralinojs client: v${NL_CVERSION}`);
-            break;
-        case "QUIT":
-            Neutralino.app.exit();
-            break;
-    }
+  switch(event.detail.id) {
+    case "VERSION":
+      Neutralino.os.showMessageBox("Version information",
+        `Neutralinojs server: v${NL_VERSION} | Neutralinojs client: v${NL_CVERSION}`);
+      break;
+    case "QUIT":
+      Neutralino.app.exit();
+      break;
+  }
 }
 
 function onWindowClose() {
-    Neutralino.app.exit();
+  Neutralino.app.exit();
 }
 
 // https://neutralino.js.org/docs/api/os/

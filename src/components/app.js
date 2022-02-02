@@ -1,6 +1,10 @@
+/*
+  LICENSE: MIT
+  Created by: Lightnet
+*/
 
 import React from "react";
-import ButtonApi from "./components/buttonapi";
+import ButtonApi from "./buttonapi";
 
 export default function MyApp(){
 

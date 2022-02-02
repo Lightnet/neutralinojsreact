@@ -27,7 +27,7 @@ Neutralino has build in library.
 
 But were using both. One for admin and other is users. By using React components to make some simple UI and layout for easy access.
 
-# guide:
+# Guide:
   Install nodejs.
 
   Install npm packages.
@@ -63,9 +63,15 @@ npm run devp
 
 https://neutralino.js.org/docs/cli/neu-cli
 
-# config:
+# Layout:
+- resources (browser client)
+- src (client and server)
+- neutralino.config.json (browser config)
+- package.json (node js)
+- webpack.config.js ( for react.js and bebel.js)
 
-
+# Config:
+(wip)
 ```
 "cli": {
   "clientLibrary": "/resources/js/neutralino.js",

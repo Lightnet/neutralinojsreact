@@ -9,11 +9,11 @@
 
 const path = require('path');
 
-let file = path.join(__dirname, "./src/client.js");
-console.log(file);
+//let file = path.join(__dirname, "./src/client/client.js");
+//console.log(file);
 
 module.exports = {
-  entry: path.join(__dirname, "./src/client.js"),
+  entry: path.join(__dirname, "./src/client/client.js"),
   mode: process.env.NODE_ENV || "development",
 
   output: {

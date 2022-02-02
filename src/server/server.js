@@ -1,3 +1,8 @@
+/*
+  LICENSE: MIT
+  Created by: Lightnet
+*/
+
 const express = require('express')
 const app = express()
 const port = 80
@@ -7,15 +12,6 @@ var cors = require('cors')
 var bodyParser = require('body-parser')
 
 function main(){
-  /*
-  const devport = 51577;
-  const app0 = express()
-  app0.use(express.static('.'))
-  app0.use(cors())
-  app0.listen(devport, () => {
-    console.log(`web server listen http://localhost:${devport}`)
-  })
-  */
 
   //app.use(express.static('public'))
   app.use(express.static('./resources'))

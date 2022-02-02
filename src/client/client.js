@@ -1,6 +1,9 @@
 /*
-  browser client react.js ...
+  LICENSE: MIT
+  Created by: Lightnet
 
+  Information:
+    Browser client react.js entry point.
 */
 
 console.log('Start React:',0);
@@ -8,7 +11,7 @@ console.log('Start React:',0);
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import MyApp from "./app.js";
+import MyApp from "../components/app.js";
 
 ReactDOM.render(<MyApp />, document.getElementById('neutralinoapp'));
 //window.Neutralino.init(); // Add this function call
