@@ -79,7 +79,15 @@ serversetup();
 console.log(window.location);
 
 Neutralino.init();
-//Neutralino.window.
+//Neutralino.window
+// https://neutralino.js.org/docs/api/window/
+async function init(){
+  await Neutralino.window.setSize({
+    resizable: true
+  });
+}
+
+init();
 
 Neutralino.events.on("trayMenuItemClicked", onTrayMenuItemClicked);
 Neutralino.events.on("windowClose", onWindowClose);

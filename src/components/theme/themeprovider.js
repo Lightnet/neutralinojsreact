@@ -4,7 +4,7 @@
 */
 
 // https://neutralino.js.org/docs/api/storage
-
+// https://lukelowrey.com/css-variable-theme-switcher/
 import React, { createContext, useEffect, useMemo, useState} from "react";
 
 export const themeContext = createContext();
@@ -23,6 +23,9 @@ export function ThemeProvider(props){
 
   //check theme
   useEffect(()=>{
+    //var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    //if (storedTheme)
+      //document.documentElement.setAttribute('data-theme', storedTheme)
 
   },[])
 

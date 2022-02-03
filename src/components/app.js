@@ -4,24 +4,34 @@
 */
 
 import React from "react";
-import ButtonApi from "./buttonapi";
-import WindowHeader from "./neutralino/windowheader";
 
+import IndexPage from "./indexpage";
+import { NeutralinoProvider } from "./neutralino/neutralinoprovider";
+import WindowHeader from "./neutralino/windowheader";
+import { ThemeProvider } from "./theme/themeprovider";
+
+import {
+  BrowserRouter
+} from "react-router-dom";
 export default function MyApp(){
 
-  return <>
-    <WindowHeader />
-    <div style={{
-    position:'fixed'
-    , top:'28px'
-    , left:'0px'
-    , width:'100%'
-    , height:'100%'
-    //, WebkitAppRegion:'drag'
-    //, background:'#000000'
-  }}>
-    <label>Hello World! React.js!++</label>
-    <ButtonApi></ButtonApi>
-  </div>
-  </>
+  return <ThemeProvider>
+    <NeutralinoProvider>
+      <BrowserRouter>
+        <WindowHeader />
+
+        <div style={{
+        position:'fixed'
+        , top:'26px'
+        , left:'0px'
+        , width:'100%'
+        , height:'100%'
+        //, WebkitAppRegion:'drag'
+        //, background:'#000000'
+        }}>
+        <IndexPage></IndexPage>
+        </div>
+      </BrowserRouter>
+    </NeutralinoProvider>
+  </ThemeProvider>
 }

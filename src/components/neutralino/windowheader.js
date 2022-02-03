@@ -1,6 +1,7 @@
 
 
 import React, { useEffect } from "react";
+import ThemeButton from "../theme/themebutton";
 
 export default function WindowHeader(){
 
@@ -16,7 +17,7 @@ export default function WindowHeader(){
     , top:'0px'
     , left:'0px'
     , width:'100%'
-    , height:'28px'
+    , height:'24px'
     , background:'#A9A9A9'
     , WebKitAppRegion:'drag'
   };
@@ -49,6 +50,13 @@ export default function WindowHeader(){
     await Neutralino.app.restartProcess({ args: '--restarted' });
   }
 
+  function clickRefresh(){
+    //window.location.href = 'http://localhost:3000';
+    //window.location.replace('http://localhost:3000');
+    window.location = ('http://localhost:3000') 
+    //location.reload();
+  }
+
   return <>
   <div id="WindowHeader" style={style}>
     
@@ -56,6 +64,8 @@ export default function WindowHeader(){
   <div style={{position:'fixed',left:'0px',top:'0px'}}>
     <button> (=) </button>
     <button onClick={clickReload}> Reload </button>
+    <button onClick={clickRefresh}> Refresh </button>
+    <ThemeButton></ThemeButton>
   </div>
   <div style={{position:'fixed',right:'0px',top:'0px'}}>
     <button onClick={windowMini}> _ </button>
