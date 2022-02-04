@@ -15,6 +15,7 @@
     "app.*",
     "os.*",
     "window.*",
+    "storage.*",
     "filesystem.*",
     "extensions.*"
   ],

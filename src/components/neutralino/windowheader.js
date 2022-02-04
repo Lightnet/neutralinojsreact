@@ -18,7 +18,7 @@ export default function WindowHeader(){
     , left:'0px'
     , width:'100%'
     , height:'24px'
-    , background:'#A9A9A9'
+    //, background:'#A9A9A9'
     , WebKitAppRegion:'drag'
   };
 
@@ -58,20 +58,20 @@ export default function WindowHeader(){
   }
 
   return <>
-  <div id="WindowHeader" style={style}>
-    
-  </div>
-  <div style={{position:'fixed',left:'0px',top:'0px'}}>
-    <button> (=) </button>
-    <button onClick={clickReload}> Reload </button>
-    <button onClick={clickRefresh}> Refresh </button>
-    <ThemeButton></ThemeButton>
-  </div>
-  <div style={{position:'fixed',right:'0px',top:'0px'}}>
-    <button onClick={windowMini}> _ </button>
-    <button onClick={clickToggleScreen}> [=] </button>
-    <button onClick={clickClose}> X </button>
-  </div>
-</>
+    <div id="WindowHeader" className="headerp" style={style}>
+      
+    </div>
+    <div style={{position:'fixed',left:'0px',top:'0px'}}>
+      <img className="imgbtn" height='18px' width='18px' src="/icons/menulist.svg"></img>
+      <img onClick={clickReload} className="imgbtn" height='18px' width='18px' src="/icons/refresh.svg"></img>
+      <img onClick={clickRefresh} className="imgbtn" height='18px' width='18px' src="/icons/refresh2.svg"></img>
+      <ThemeButton></ThemeButton>
+    </div>
+    <div style={{position:'fixed',right:'0px',top:'0px'}}>
+      <img className="imgbtn" onClick={windowMini} height='18px' width='18px' src="/icons/minimize.svg"></img>
+      <img className="imgbtn" onClick={clickToggleScreen} height='18px' width='18px' src="/icons/fullscreen1.svg"></img>
+      <img className="imgbtn" onClick={clickClose} height='18px' width='18px' src="/icons/close.svg"></img>
+    </div>
+  </>
 }
 // note layer effect drag

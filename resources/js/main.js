@@ -82,9 +82,9 @@ Neutralino.init();
 //Neutralino.window
 // https://neutralino.js.org/docs/api/window/
 async function init(){
-  await Neutralino.window.setSize({
-    resizable: true
-  });
+  //await Neutralino.window.setSize({
+    //resizable: true
+  //});
 }
 
 init();

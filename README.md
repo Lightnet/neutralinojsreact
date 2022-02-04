@@ -58,7 +58,7 @@ neu run --frontend-lib-dev
 
   server and browser client
 ```
-npm run devp
+npm run dev
 ```
 
 https://neutralino.js.org/docs/cli/neu-cli
