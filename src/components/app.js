@@ -13,6 +13,7 @@ import { ThemeProvider } from "./theme/themeprovider";
 import {
   BrowserRouter
 } from "react-router-dom";
+import NavBar from "./navbar";
 export default function MyApp(){
 
   return <ThemeProvider>
@@ -29,7 +30,8 @@ export default function MyApp(){
         //, WebkitAppRegion:'drag'
         //, background:'#000000'
         }}>
-        <IndexPage></IndexPage>
+          <NavBar />
+          <IndexPage></IndexPage>
         </div>
       </BrowserRouter>
     </NeutralinoProvider>

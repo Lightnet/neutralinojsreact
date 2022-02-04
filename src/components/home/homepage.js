@@ -11,8 +11,6 @@ export default function HomePage(){
 
   return <>
     <label>Hello World! React.js!++</label> <br/>
-    <Link to="/"> Home </Link> <br />
-    <Link to="about"> About </Link> <br />
     <ButtonApi></ButtonApi>
   </>
 }
