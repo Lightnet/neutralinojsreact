@@ -17,5 +17,9 @@ router.get('/api/test', function (req, res) {
   res.send(JSON.stringify({meesage:'test'}));
 })
 
+router.get('/settings', function (req, res) {
+  res.send(JSON.stringify({meesage:'test'}));
+})
+
 module.exports = router;
 //export default router;

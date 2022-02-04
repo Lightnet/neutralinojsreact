@@ -39,5 +39,5 @@ export function ThemeProvider(props){
     theme
   ])
 
-  return <themeContext.Provider value={value}  {...props}/>
+  return <themeContext.Provider value={value} {...props}/>
 }
